@@ -6,6 +6,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from config.config import Config, load_config
 from handlers import user, other
+from keyboards.set_menu import set_main_menu
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +26,8 @@ async def main() -> None:
         default=DefaultBotProperties(parse_mode=ParseMode.HTML)
     )
     dp = Dispatcher()
+
+    await set_main_menu(bot)
 
     dp.include_router(user.router)
     dp.include_router(other.router)

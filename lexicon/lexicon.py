@@ -23,3 +23,8 @@ LEXICON_RU: dict[str, str] = {
     "bot_choice": "Мой выбор",
     "get_stat": "Посмотреть статистику"
 }
+
+LEXICON_COMMANDS_RU: dict[str, str] = {
+    '/start': 'Запустить бота',
+    '/help': 'Справка по работе бота',
+}
