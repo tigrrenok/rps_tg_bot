@@ -4,9 +4,10 @@ from lexicon.lexicon import LEXICON_RU
 
 button_yes = KeyboardButton(text=LEXICON_RU["yes_button"])
 button_no = KeyboardButton(text=LEXICON_RU["no_button"])
+get_stat_button = KeyboardButton(text=LEXICON_RU["get_stat"])
 
 yes_no_kb_builder = ReplyKeyboardBuilder()
-yes_no_kb_builder.row(button_yes, button_no, width=2)
+yes_no_kb_builder.row(button_yes, button_no, get_stat_button, width=2)
 
 yes_no_kb: ReplyKeyboardMarkup = yes_no_kb_builder.as_markup(
     one_time_keyboard=True, resize_keyboard=True
